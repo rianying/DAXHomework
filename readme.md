@@ -36,7 +36,7 @@ data = pd.read_csv('/path_to_your_data/Data.csv')
 
 ### Visualization Findings
 
-![Alt text](https://imgur.com/VWJGX1L)
+![Plot](https://i.imgur.com/VWJGX1L.png)
 An exploration of relationships between the variables via scatter plots revealed several key insights:
 
 - **Positive Correlation:** There's a discernible positive correlation among all subject scores. This implies a general trend where students scoring high in one subject are likely to score high in others.
