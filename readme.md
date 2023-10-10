@@ -1,9 +1,9 @@
-# Math Score Prediction Model
+# PT.DAX Indonesia Candidate Assesment (Math Score Prediction Model)
 
 ## Introduction
-This project aims to develop a model to predict students' Math scores based on their scores in Physics, Science, and Statistics using a dataset of 466 entries.
+This project aims to develop a model to predict students Math scores based on their scores in Physics, Science, and Statistics using a dataset of 466 entries.
 
-## Exploratory Data Analysis (EDA) and Key Findings
+## Exploratory Data Analysis (EDA) and Findings
 
 ### Step 1: Analyze and Visualize Sample Data
 
@@ -14,19 +14,19 @@ data.head()
 data.describe()
 ```
 
-Upon loading the data and performing an initial examination, several patterns, correlations, and anomalies were observed that were critical to understand the dataset's nature and to guide subsequent model development.
+After we load the data and perform an initial examination, several patterns, correlations, and anomalies were observed that were critical to understand the dataset and to guide model development.
 
 ### Data Overview
 
 1. **Data Structure:**
    - The dataset contains 466 entries and 4 variables: "Physics", "Science", "Statistics", and "Math".
-   - All variables are integers and there are no missing values, ensuring a smooth modeling process without the need for imputation.
+   - All variables are integers and there are no missing values, ensuring a smooth modeling process without the need for much transformation.
 
 ![Info](https://i.imgur.com/tjndFFO.png)
 ![Head](https://i.imgur.com/tLjUQHN.png)
 
 2. **Descriptive Statistics:**
-   The variables exhibit the following statistical properties:
+   The variables has the following properties:
    - **Physics:** Mean: 71.74, Std Dev: 16.03, Min: 0, Max: 99
    - **Science:** Mean: 72.81, Std Dev: 14.27, Min: 0, Max: 99
    - **Statistics:** Mean: 73.68, Std Dev: 12.18, Min: 22, Max: 100
@@ -35,23 +35,25 @@ Upon loading the data and performing an initial examination, several patterns, c
 ### Visualization Findings
 
 ![Plot](https://i.imgur.com/VWJGX1L.png)
-An exploration of relationships between the variables via scatter plots revealed several key insights:
+An exploration of relationships between the variables via scatter plots shows several insights:
 
-- **Positive Correlation:** There's a discernible positive correlation among all subject scores. This implies a general trend where students scoring high in one subject are likely to score high in others.
+- **Positive Correlation:** There's a positive correlation among all subject scores. This implies a general trend where students scoring high in one subject are much likely to score high in others.
 - **Score Distribution:** Most students have scores clustered between 60 and 80 across all subjects, which might indicate a general proficiency or grading trend among the students.
-- **Potential Outliers:** Some scores, particularly zeros in "Physics" and "Science", were identified as potential outliers. These might indicate either data entry errors or instances where students did not participate in the test.
+- **Potential Outliers:** Some zeros in "Physics" and "Science" was identified as potential outliers. These might indicate either data entry errors or some occurences where students did not participate in the test.
 
-These findings from the EDA were crucial in informing the subsequent data preprocessing and model development stages, guiding decisions such as outlier handling and model selection.
+These findings from the EDA were important in the data preprocessing and model development stages, guiding decisions such as outlier handling and model selection.
 
 ## Model Development
 
 ### 1. Why Choose Gradient Boosting?
 
 #### Background
-Gradient Boosting was chosen after preliminary models (Linear Regression, Random Forest, Polynomial Regression) exhibited suboptimal predictive performance, suggesting that the relationship between the predictor variables (Physics, Science, and Statistics scores) and the target variable (Math scores) might be non-linear and complex.
+Gradient Boosting was chosen after trials and errors using other models (Linear Regression, Random Forest, Polynomial Regression). It is having suboptimal predictive performance, suggesting that the relationship between the predictor variables (Physics, Science, and Statistics scores) and the target variable (Math scores) might be non-linear and complex.
 
-- **Versatility:** It can capture complex non-linear relationships and interactions between features, making it suitable for this problem where linear models performed inadequately.
-- **Ensemble Learning:** It leverages ensemble learning, combining multiple weak learners (decision trees) to create a strong predictive model, often providing higher accuracy than individual models.
+There are few reasoning behind why I chose the Gradient Boosting:
+
+- **Versatility:** It can capture complex non-linear relationships and interactions between features, making it suitable for this problem where linear models performed poorly.
+- **Ensemble Learning:** It make use of ensemble learning, combining multiple weak learners (decision trees) to create a strong predictive model, often providing higher accuracy than individual models.
 - **Handling Overfitting:** Gradient Boosting has mechanisms to prevent overfitting through regularization and ensemble learning, making it capable of performing well on various kinds of data.
 
 ### 2. Model Development Process
@@ -136,6 +138,13 @@ comparison_gb_best = pd.DataFrame({'Actual': y_filtered, 'Predicted': best_gb_pr
 comparison_gb_best.to_csv('/path_to_save_location/predicted_math_scores.csv', index=False)
 ```
 Predictions were generated using the best model from the grid search and exported to a CSV file for further use or analysis.
+
+#### f. Prediction Result
+```python
+result = pd.read_csv('predicted_math_scores.csv')
+print(result.head(10))
+```
+![Result](https://i.imgur.com/AKxWhts.png)
 
 ## Conclusion
 The project provided valuable insights into the relationships between scores in Physics, Science, Statistics, and Math. While the Gradient Boosting model provided the best results among those tested, predictive performance was limited, indicating that scores in the three predictor subjects do not strongly determine Math scores. Future work may explore additional data and modeling strategies to enhance predictive performance.
