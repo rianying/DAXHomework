@@ -7,6 +7,98 @@ This project aims to develop a model to predict students' Math scores based on t
 
 ### Step 1: Analyze and Visualize Sample Data
 
+```python
+data = pd.read_csv('Data.csv')
+data.info()
+data.head()
+data.describe()
+```
+```html
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Pysics</th>
+      <th>Science</th>
+      <th>Statistics</th>
+      <th>Math</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>466.000000</td>
+      <td>466.000000</td>
+      <td>466.000000</td>
+      <td>466.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>71.742489</td>
+      <td>72.813305</td>
+      <td>73.682403</td>
+      <td>74.540773</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>16.033238</td>
+      <td>14.270110</td>
+      <td>12.180806</td>
+      <td>11.424528</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>22.000000</td>
+      <td>22.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>66.000000</td>
+      <td>66.000000</td>
+      <td>66.250000</td>
+      <td>67.000000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>74.000000</td>
+      <td>74.000000</td>
+      <td>74.000000</td>
+      <td>74.000000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>82.000000</td>
+      <td>83.000000</td>
+      <td>83.000000</td>
+      <td>83.000000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>99.000000</td>
+      <td>99.000000</td>
+      <td>100.000000</td>
+      <td>99.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+```
 Upon loading the data and performing an initial examination, several patterns, correlations, and anomalies were observed that were critical to understand the dataset's nature and to guide subsequent model development.
 
 ### Data Overview
