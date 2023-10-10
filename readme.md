@@ -33,7 +33,12 @@ After we load the data and perform an initial examination, several patterns, cor
    - **Math:** Mean: 74.54, Std Dev: 11.42, Min: 22, Max: 99
 
 ### Visualization Findings
-
+```python
+plt.figure(figsize=(10, 8))
+sns.pairplot(data, kind="scatter")
+plt.suptitle('Pairwise Relationships between Variables', y=1.02)
+plt.show()
+```
 ![Plot](https://i.imgur.com/VWJGX1L.png)
 An exploration of relationships between the variables via scatter plots shows several insights:
 
