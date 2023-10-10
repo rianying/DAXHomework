@@ -22,10 +22,8 @@ Upon loading the data and performing an initial examination, several patterns, c
    - The dataset contains 466 entries and 4 variables: "Physics", "Science", "Statistics", and "Math".
    - All variables are integers and there are no missing values, ensuring a smooth modeling process without the need for imputation.
 
-```python
-# Load data
-data = pd.read_csv('/path_to_your_data/Data.csv')
-```
+![Info](https://i.imgur.com/tjndFFO.png)
+![Head](https://i.imgur.com/tLjUQHN.png)
 
 2. **Descriptive Statistics:**
    The variables exhibit the following statistical properties:
