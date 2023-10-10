@@ -122,7 +122,7 @@ plt.show()
 ```
 Model evaluation involved assessing how well the model predicted Math scores, using metrics like Mean Absolute Error (MAE) and R^2 Score, and visualizations like Actual vs. Predicted scatter plots and Residual histograms.
 
-![Evaluation](blob:https://imgur.com/cbca4e72-d280-498d-bc14-a0d615318653)
+![Evaluation](https://i.imgur.com/yzEojrC.png)
 
 #### e. Prediction and Export
 ```python
