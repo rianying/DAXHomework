@@ -1,4 +1,3 @@
-```markdown
 # Math Score Prediction Model
 
 ## Introduction
