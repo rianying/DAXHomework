@@ -153,4 +153,6 @@ print(result.head(10))
 
 ## Conclusion
 The project provided valuable insights into the relationships between scores in Physics, Science, Statistics, and Math. 
+
+
 Although the Gradient Boosting model provided the best results among those tested, prediction performance was limited, indicating that scores in the three predictor subjects do not strongly determine Math scores. Future work may explore additional data and modeling strategies to enhance predictive performance.
