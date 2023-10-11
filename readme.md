@@ -31,6 +31,7 @@ After we load the data and perform an initial examination, several patterns, cor
    - **Science:** Mean: 72.81, Std Dev: 14.27, Min: 0, Max: 99
    - **Statistics:** Mean: 73.68, Std Dev: 12.18, Min: 22, Max: 100
    - **Math:** Mean: 74.54, Std Dev: 11.42, Min: 22, Max: 99
+![Statistic](https://i.imgur.com/r7ASxh5.jpg)
 
 ### Visualization Findings
 ```python
